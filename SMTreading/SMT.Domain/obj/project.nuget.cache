@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "etKIW17eIFY=",
+  "success": true,
+  "projectFilePath": "D:\\Project\\SM trading\\SMTreading\\SMT.Domain\\SMT.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\mathnet.numerics\\5.0.0\\mathnet.numerics.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

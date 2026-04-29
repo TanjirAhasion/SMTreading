@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="SMT.Application/SMT.Application.csproj" />
+  <Project Path="SMT.Domain/SMT.Domain.csproj" />
+  <Project Path="SMT.Infrastructure/SMT.Infrastructure.csproj" />
+  <Project Path="SMTreading.api/SMTreading.api.csproj" />
+</Solution>

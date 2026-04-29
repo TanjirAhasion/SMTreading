@@ -1,0 +1,12 @@
+D:\Project\SM trading\SMTreading\SMT.Domain\bin\Debug\net8.0\SMT.Domain.deps.json
+D:\Project\SM trading\SMTreading\SMT.Domain\bin\Debug\net8.0\SMT.Domain.dll
+D:\Project\SM trading\SMTreading\SMT.Domain\bin\Debug\net8.0\SMT.Domain.pdb
+D:\Project\SM trading\SMTreading\SMT.Domain\obj\Debug\net8.0\SMT.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\SM trading\SMTreading\SMT.Domain\obj\Debug\net8.0\SMT.Domain.AssemblyInfoInputs.cache
+D:\Project\SM trading\SMTreading\SMT.Domain\obj\Debug\net8.0\SMT.Domain.AssemblyInfo.cs
+D:\Project\SM trading\SMTreading\SMT.Domain\obj\Debug\net8.0\SMT.Domain.csproj.CoreCompileInputs.cache
+D:\Project\SM trading\SMTreading\SMT.Domain\obj\Debug\net8.0\SMT.Domain.dll
+D:\Project\SM trading\SMTreading\SMT.Domain\obj\Debug\net8.0\refint\SMT.Domain.dll
+D:\Project\SM trading\SMTreading\SMT.Domain\obj\Debug\net8.0\SMT.Domain.pdb
+D:\Project\SM trading\SMTreading\SMT.Domain\obj\Debug\net8.0\ref\SMT.Domain.dll
+D:\Project\SM trading\SMTreading\SMT.Domain\obj\Debug\net8.0\SMT.Domain.csproj.AssemblyReference.cache
