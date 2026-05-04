@@ -924,6 +924,7 @@
         "dependencies": {
           "MediatR": "14.1.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.3.9",
+          "Microsoft.EntityFrameworkCore": "8.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.6",
           "SMT.Domain": "1.0.0"
         },

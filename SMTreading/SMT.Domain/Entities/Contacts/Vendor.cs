@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace StockoraPOS.Domain.Entities.Contacts
+namespace SMT.Domain.Entities.Contacts
 {
     public class Vendor : BaseEntity
     {

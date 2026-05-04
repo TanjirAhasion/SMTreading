@@ -42,6 +42,10 @@ namespace SMT.Domain.Entities.Items
         [StringLength(500)]
         public string? Note { get; set; }
 
+        [Required]
+        public bool IsSerialNumberLinkToProduct {  get; set; }
+
+        public string? LinkedProductSerialNumberImageUrl { get; set; } = string.Empty;
         // Navigation property: One brand can have many products
         public virtual ICollection<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
     }

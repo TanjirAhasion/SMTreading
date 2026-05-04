@@ -10,6 +10,7 @@ namespace SMT.Domain.Entities.Contacts
     {
         [Key]
         public long Id { get; set; }
+        
         [Required, MaxLength(100)]
         public string FirstName { get; set; } = string.Empty;
 

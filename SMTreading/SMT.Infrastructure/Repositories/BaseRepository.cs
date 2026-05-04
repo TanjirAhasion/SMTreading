@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using SMT.Application.Interfaces;
 using SMT.Infrastructure.context;
 using System;
@@ -11,7 +12,7 @@ namespace SMT.Infrastructure.Services
     public class BaseRepository<T>(AppDbContext db) : IBaseRepository<T> where T : class
     {
         protected readonly AppDbContext Db = db;
-
+        private IDbContextTransaction? _transaction;
         public async Task<T?> GetByIdAsync(Guid id) =>
             await Db.Set<T>().FindAsync(id);
 
@@ -26,6 +27,11 @@ namespace SMT.Infrastructure.Services
             Db.Set<T>().Add(entity);
             await Db.SaveChangesAsync();
             return entity;
+        }
+        public async Task CreateRangeAsync(IEnumerable<T> entities)
+        {
+            await Db.Set<T>().AddRangeAsync(entities);
+            await Db.SaveChangesAsync();
         }
 
         public async Task<T> UpdateAsync(T entity)
@@ -53,5 +59,33 @@ namespace SMT.Infrastructure.Services
             return true;
         }
 
+        public async Task<IDbContextTransaction> BeginTransactionAsync()
+        {
+            _transaction = await Db.Database.BeginTransactionAsync();
+            return _transaction;
+        }
+
+        public async Task CommitTransactionAsync()
+        {
+            if (_transaction != null)
+            {
+                await _transaction.CommitAsync();
+                await _transaction.DisposeAsync();
+            }
+        }
+
+        public async Task RollbackTransactionAsync()
+        {
+            if (_transaction != null)
+            {
+                await _transaction.RollbackAsync();
+                await _transaction.DisposeAsync();
+            }
+        }
+
+        public async Task<bool> SaveChangesAsync()
+        {
+            return await Db.SaveChangesAsync() > 0;
+        }
     }
 }

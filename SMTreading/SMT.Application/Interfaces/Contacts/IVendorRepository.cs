@@ -1,4 +1,4 @@
-﻿using StockoraPOS.Domain.Entities.Contacts;
+﻿using SMT.Domain.Entities.Contacts;
 using System;
 using System.Collections.Generic;
 using System.Linq;

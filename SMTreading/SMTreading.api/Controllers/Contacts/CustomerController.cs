@@ -5,7 +5,7 @@ using SMT.Application.Interfaces.Contacts;
 namespace SMTreading.api.Controllers.Contacts
 {
     [ApiController]
-    [Route("api/v1/customers")]
+    [Route("api/customers")]
     public class CustomerController : ControllerBase
     {
         private readonly ICustomerService _service;

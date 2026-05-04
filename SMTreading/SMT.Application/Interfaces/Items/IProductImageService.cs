@@ -13,6 +13,6 @@ namespace SMT.Application.Interfaces.Items
         Task<ProductImageDto> CreateAsync([Microsoft.AspNetCore.Mvc.FromForm] CreateProductImageDto dto);
         Task<ProductImageDto?> UpdateAsync(long id, UpdateProductImageDto dto);
         Task<bool> DeleteAsync(long id);
-        Task<List<ProductImage>> GetBySerialIdAsync(long serialId);
+        Task<List<ProductImageWithLinkedDto>> GetBySerialIdAsync(long serialId);
     }
 }

@@ -1,10 +1,12 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using SMT.Application.Auth.Interfaces;
 using SMT.Application.Common;
+using SMT.Application.Interfaces.Accounts;
 using SMT.Application.Interfaces.Contacts;
 using SMT.Application.Interfaces.Inventory;
 using SMT.Application.Interfaces.Items;
 using SMT.Infrastructure.Auth.Services;
+using SMT.Infrastructure.Repositories.Accounts;
 using SMT.Infrastructure.Repositories.Contacts;
 using SMT.Infrastructure.Repositories.Inventory;
 using SMT.Infrastructure.Repositories.Items;
@@ -36,6 +38,10 @@ namespace SMT.Infrastructure
 
             services.AddScoped<IVendorRepository, VendorRepository>();
             services.AddScoped<IVendorService, VendorService>();
+            services.AddScoped<IVendorPaymentRepository, VendorPaymentRepository>();
+            services.AddScoped<IVendorPaymentService, VendorPaymentService>();
+            services.AddScoped<IVendorLedgerRepository, VendorLedgerRepository>();
+            services.AddScoped<IVendorLedgerService, VendorLedgerService>();
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<ICustomerService, CustomerService>();

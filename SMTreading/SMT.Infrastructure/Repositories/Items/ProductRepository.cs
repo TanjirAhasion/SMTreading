@@ -17,5 +17,12 @@ namespace SMT.Infrastructure.Repositories.Items
                 .Include(p => p.Brand)
                 .ToListAsync();
         }
+
+        public async Task<List<Product>> GetByIdsAsync(List<long> productIds)
+        {
+            return await db.Products
+                .Where(p => productIds.Contains(p.Id))
+                .ToListAsync();
+        }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HC8xClWlxwc=",
+  "dgSpecHash": "KljHP/EmHJg=",
   "success": true,
-  "projectFilePath": "D:\\Project\\SM trading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
+  "projectFilePath": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -114,9 +114,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.7.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-5mfx-4wcx-rv27",
-      "projectPath": "D:\\Project\\SM trading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
+      "projectPath": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Project\\SM trading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
+      "filePath": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net8.0"
@@ -126,9 +126,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.7.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
-      "projectPath": "D:\\Project\\SM trading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
+      "projectPath": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Project\\SM trading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
+      "filePath": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net8.0"
@@ -138,9 +138,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.7.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-wvxc-855f-jvrv",
-      "projectPath": "D:\\Project\\SM trading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
+      "projectPath": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Project\\SM trading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
+      "filePath": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net8.0"
@@ -150,9 +150,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'System.IdentityModel.Tokens.Jwt' 7.0.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
-      "projectPath": "D:\\Project\\SM trading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
+      "projectPath": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Project\\SM trading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
+      "filePath": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
       "libraryId": "System.IdentityModel.Tokens.Jwt",
       "targetGraphs": [
         "net8.0"

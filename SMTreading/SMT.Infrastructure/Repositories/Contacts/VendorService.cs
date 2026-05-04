@@ -1,6 +1,6 @@
 ﻿using SMT.Application.DTO.Contacts;
 using SMT.Application.Interfaces.Contacts;
-using StockoraPOS.Domain.Entities.Contacts;
+using SMT.Domain.Entities.Contacts;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

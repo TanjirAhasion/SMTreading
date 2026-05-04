@@ -1,7 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SMT.Application.DTO.Accounts;
 using SMT.Application.DTO.Inventory;
+using SMT.Application.Helper;
+using SMT.Application.Interfaces.Accounts;
 using SMT.Application.Interfaces.Inventory;
 using SMT.Application.Interfaces.Items;
+using SMT.Domain.Entities.Accounts;
 using SMT.Domain.Entities.Inventory;
 using SMT.Domain.Entities.Items;
 using SMT.Domain.Enums;
@@ -20,6 +24,9 @@ namespace SMT.Infrastructure.Repositories.Inventory
         private readonly IPurchaseItemRepository _purchaseItemRepo;
         private readonly IPurchaseItemProductSerialRepository _purchaseItemProductSerialRepo;
 
+        private readonly IVendorPaymentService _vendorPaymentService;
+        private readonly IVendorLedgerRepository _vendorLedgerRepo;
+
         private readonly IProductRepository _productRepo;
         private readonly IProductSerialRepository _productSerialRepo;
 
@@ -27,12 +34,16 @@ namespace SMT.Infrastructure.Repositories.Inventory
             IPurchaseRepository purchaseRepo,
             IPurchaseItemRepository purchaseItemRepo,
             IPurchaseItemProductSerialRepository purchaseItemProductSerialRepo,
+            IVendorPaymentService vendorPaymentService,
+            IVendorLedgerRepository vendorLedgerRepo,
             IProductRepository productRepo,
             IProductSerialRepository productSerialRepo)
         {
             _purchaseRepo = purchaseRepo;
             _purchaseItemRepo = purchaseItemRepo;
             _purchaseItemProductSerialRepo = purchaseItemProductSerialRepo;
+            _vendorPaymentService = vendorPaymentService;
+            _vendorLedgerRepo = vendorLedgerRepo;
             _productRepo = productRepo;
             _productSerialRepo = productSerialRepo;
 
@@ -40,82 +51,164 @@ namespace SMT.Infrastructure.Repositories.Inventory
 
         public async Task<long> CreatePurchaseAsync(CreatePurchaseRequest request)
         {
-            // 1. Create Purchase
-            var purchase = new Purchase
+            using var transaction = await _purchaseRepo.BeginTransactionAsync();
+
+            try
             {
-                VendorId = request.VendorId,
-                PurchaseDate = DateTime.UtcNow,
-                SubTotal = request.SubTotal,
-                Discount = request.Discount,
-                NetTotal = request.SubTotal - request.Discount,
-                PaidAmount = request.PaidAmount,
-                DueAmount = (request.SubTotal - request.Discount) - request.PaidAmount
-            };
-
-            await _purchaseRepo.CreateAsync(purchase);
-
-            decimal grossTotal = 0;
-
-            foreach (var item in request.Items)
-            {
-                // 2. Validate product
-                var product = await _productRepo.GetByIdAsync(item.ProductId);
-                if (product == null)
-                    throw new Exception($"Product not found: {item.ProductId}");
-
-                // 3. Create Purchase Item
-                var purchaseItem = new PurchaseItem
+                // 1. Create Purchase
+                var purchase = new Purchase
                 {
-                    PurchaseId = purchase.Id,
-                    ProductId = item.ProductId,
-                    Quantity = item.Quantity,
-                    UnitCost = item.UnitCost,
-                    DiscountAllocated = item.Discount,
-                    TotalCost = item.Quantity * item.UnitCost
+                    VendorId = request.VendorId,
+                    PurchaseNumber = $"PUR-{DateTime.UtcNow.Ticks}",
+                    PurchaseDate = DateTime.UtcNow,
+                    Discount = request.Discount,
+                    SubTotal = 0,
+                    IsPaid = false
                 };
 
-                await _purchaseItemRepo.CreateAsync(purchaseItem);
+                await _purchaseRepo.CreateAsync(purchase);
+                //await _purchaseRepo.SaveChangesAsync(); // 🔥 ensure purchase.Id exists
 
-                grossTotal += purchaseItem.TotalCost;
+                decimal grossTotal = 0;
 
-                string batchNo = $"B-{DateTime.UtcNow:yyyyMMddHHmmss}";
+                // 2. Load all required products in ONE query (optimized)
+                var productIds = request.Items.Select(x => x.ProductId).Distinct().ToList();
+                var products = await _productRepo.GetByIdsAsync(productIds);
+                var productDict = products.ToDictionary(x => x.Id);
 
-                // 4. Generate Serials for each unit
-                for (int i = 0; i < item.Quantity; i++)
+                var purchaseItems = new List<PurchaseItem>();
+
+                // 3. Create Purchase Items
+                foreach (var item in request.Items)
                 {
-                    var serial = await GenerateUniqueSerialAsync(product.Model);
+                    if (!productDict.ContainsKey(item.ProductId))
+                        throw new Exception($"Product not found: {item.ProductId}");
 
-                    var productSerial = new ProductSerial
+                    var purchaseItem = new PurchaseItem
                     {
-                        ProductId = product.Id,
-                        Product = product,
-                        SerialNumber = serial,
-                        PurchaseCost = item.UnitCost,
-                        Status = ProductSerialStatus.InStock,
-                        BatchNumber = batchNo,
-                        CreatedAt = DateTime.UtcNow
+                        PurchaseId = purchase.Id,
+                        ProductId = item.ProductId,
+                        Quantity = item.Quantity,
+                        UnitCost = item.UnitCost,
+                        DiscountAllocated = item.Discount,
                     };
 
-                    await _productSerialRepo.CreateAsync(productSerial);
+                    purchaseItems.Add(purchaseItem);
 
-                    // 5. Mapping (PurchaseItem ↔ Serial)
-                    var mapping = new PurchaseItemProductSerial
-                    {
-                        PurchaseItemId = purchaseItem.Id,
-                        ProductSerialId = productSerial.Id,
-                        Status = ProductSerialStatus.InStock,
-                    };
-
-                    await _purchaseItemProductSerialRepo.CreateAsync(mapping);
+                    grossTotal += item.Quantity * item.UnitCost;
                 }
+
+                await _purchaseItemRepo.CreateRangeAsync(purchaseItems);
+                //await _purchaseItemRepo.SaveChangesAsync(); // 🔥 CRITICAL (IDs generated)
+
+                // 4. Generate Product Serials
+                var productSerials = new List<ProductSerial>();
+                var batchNo = $"B-{Guid.NewGuid().ToString()[..8].ToUpper()}";
+
+                foreach (var item in purchaseItems)
+                {
+                    var product = productDict[item.ProductId];
+
+                    for (int i = 0; i < item.Quantity; i++)
+                    {
+                        var serial = await GenerateUniqueSerialAsync(product.Model);
+
+                        productSerials.Add(new ProductSerial
+                        {
+                            ProductId = product.Id,
+                            SerialNumber = serial,
+                            PurchaseCost = item.UnitCost,
+                            Status = ProductSerialStatus.InStock,
+                            BatchNumber = batchNo,
+                            PurchaseDate = request.PurchaseDate,
+                            CreatedAt = DateTime.UtcNow,
+                            Product = product
+                        });
+                    }
+                }
+
+                await _productSerialRepo.CreateRangeAsync(productSerials);
+                //await _productSerialRepo.SaveChangesAsync(); // 🔥 CRITICAL (IDs generated)
+
+                // 5. Create Mapping (SAFE: IDs now exist)
+                var mappings = new List<PurchaseItemProductSerial>();
+                int serialIndex = 0;
+
+                foreach (var item in purchaseItems)
+                {
+                    for (int i = 0; i < item.Quantity; i++)
+                    {
+                        mappings.Add(new PurchaseItemProductSerial
+                        {
+                            PurchaseItemId = item.Id,
+                            ProductSerialId = productSerials[serialIndex].Id,
+                            Status = ProductSerialStatus.InStock,
+                            PurchaseDate = request.PurchaseDate,
+                        });
+
+                        serialIndex++;
+                    }
+                }
+
+                await _purchaseItemProductSerialRepo.CreateRangeAsync(mappings);
+                //await _purchaseItemProductSerialRepo.SaveChangesAsync();
+
+                // 6. Update totals
+                purchase.SubTotal = grossTotal;
+                if (purchase.SubTotal - purchase.Discount == request.PaidAmount)
+                {
+                    purchase.IsPaid = true;
+                }
+                await _purchaseRepo.UpdateSubTotalAsync(purchase.Id, purchase.SubTotal);
+
+                var netTotal = purchase.SubTotal - purchase.Discount;
+
+                // 7. Vendor Ledger (Debit)
+                await _vendorLedgerRepo.CreateVendorLedger(new VendorLedgerDto
+                {
+                    VendorId = request.VendorId,
+                    SourceType = VendorLedgerSourceType.Purchase,
+                    SourceId = purchase.Id,
+                    Credit = 0,
+                    Debit = netTotal
+                });
+
+                // 8. Payment (if any)
+                if (request.PaidAmount > 0)
+                {
+                    var paymentId = await _vendorPaymentService.CreateAsync(new VendorPaymentDto
+                    {
+                        VendorId = request.VendorId,
+                        PurchaseId = purchase.Id,
+                        Amount = request.PaidAmount,
+                        PaymentDate = DateTime.UtcNow,
+                        PaymentMethod = (int)PaymentMethodEnum.Cash
+                    });
+
+                    await _vendorLedgerRepo.CreateVendorLedger(new VendorLedgerDto
+                    {
+                        VendorId = request.VendorId,
+                        SourceType = VendorLedgerSourceType.Purchase,
+                        SourceId = paymentId,
+                        Credit = request.PaidAmount,
+                        Debit = 0
+                    });
+                }
+
+                await transaction.CommitAsync();
+
+                return purchase.Id;
             }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
+        }
 
-            // 6. Apply Discount
-            purchase.SubTotal = grossTotal - purchase.Discount;
-
-            await _purchaseRepo.UpdateAsync(purchase);
-
-            return purchase.Id;
+        public async Task<PagedResult<PurchaseDto>> GetPagedAsync(SearchPurchaseDto searchPurchaseDto)
+        {
+            return await _purchaseRepo.GetPagedAsync(searchPurchaseDto);
         }
 
         private async Task<string> GenerateUniqueSerialAsync(string modelNumber)

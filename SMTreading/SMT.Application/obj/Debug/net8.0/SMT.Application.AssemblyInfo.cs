@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SMT.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc689e99faf81f7e3da65eaffc9b773fec31a146")]
 [assembly: System.Reflection.AssemblyProductAttribute("SMT.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SMT.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

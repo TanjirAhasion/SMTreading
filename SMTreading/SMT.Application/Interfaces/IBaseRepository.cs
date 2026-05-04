@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Storage;
+using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
@@ -14,5 +15,13 @@ namespace SMT.Application.Interfaces
         Task<T> UpdateAsync(T entity);
         Task<bool> DeleteAsync(long id);
         Task<bool> DeleteAsync(Guid id);
+
+        Task CreateRangeAsync(IEnumerable<T> entities);
+
+        // Transaction management
+        Task<IDbContextTransaction> BeginTransactionAsync();
+        Task CommitTransactionAsync();
+        Task RollbackTransactionAsync();
+        Task<bool> SaveChangesAsync();
     }
 }

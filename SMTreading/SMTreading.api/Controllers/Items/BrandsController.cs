@@ -2,13 +2,15 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SMT.Application.DTO.Items;
+using SMT.Application.Helper;
 using SMT.Application.Interfaces.Items;
+using SMT.Domain.Enums;
 
 namespace SMTreading.api.Controllers.Items
 {
     [ApiController]
-    [Authorize(Policy = "TenantOnly")]
-    [Route("api/brands")]
+    //[Authorize(Policy = "TenantOnly")]
+    [Route("api/[controller]")]
     public class BrandsController : ControllerBase
     {
         private readonly IBrandService _service;

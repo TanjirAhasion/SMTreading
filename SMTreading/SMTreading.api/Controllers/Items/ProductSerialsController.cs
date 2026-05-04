@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SMT.Application.DTO.Items;
+using SMT.Application.Helper;
 using SMT.Application.Interfaces.Items;
 using SMT.Domain.Enums;
 
@@ -11,6 +12,15 @@ namespace SMTreading.api.Controllers.Items
     {
         [HttpGet]
         public async Task<IActionResult> GetAll() => Ok(await service.GetAllAsync());
+
+        [HttpGet("GetAllBySearchWithPagination")]
+        public async Task<ActionResult<PagedResult<ProductSerialDto>>> GetAllBySearchWithPagination(
+         [FromQuery] int page = 1, [FromQuery] int pageSize = 10,
+         [FromQuery] string? search = null)
+        {
+            var result = await service.GetPagedAsync(page, pageSize, search);
+            return Ok(result);
+        }
 
         [HttpGet("{id:long}")]
         public async Task<IActionResult> Get(long id)
@@ -34,6 +44,20 @@ namespace SMTreading.api.Controllers.Items
         
         [HttpDelete("{id:long}")]
         public async Task<IActionResult> Delete(long id) => (await service.DeleteAsync(id)) ? Ok() : NotFound();
+
+        [HttpPut("updateLinkedStatus")]
+        public async Task<IActionResult> UpdateLinkedStatus([FromForm] UpdateProductSerialLinkedDto dto)
+        {
+            var item = await service.UpdateProducSerialLinkedStatusWithImage(dto);
+            return item ? Ok() : NotFound();
+        }
+
+        [HttpPut("unLinkedStatus/{id}")]
+        public async Task<IActionResult> UnLinkedStatus(long id)
+        {
+            var item = await service.UnLinkedStatusAndRemoveLinkedImage(id);
+            return item ? Ok() : NotFound();
+        }
 
         [HttpGet("productSerialStatuses")]
         public IActionResult GetStatuses()

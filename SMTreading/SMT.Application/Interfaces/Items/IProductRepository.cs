@@ -8,5 +8,6 @@ namespace SMT.Application.Interfaces.Items
     public interface IProductRepository : IBaseRepository<Product>
     {
         Task<List<Product>> GetAllWithBrandsAsync();
+        Task<List<Product>> GetByIdsAsync(List<long> productIds);
     }
 }

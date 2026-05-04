@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SMT.Domain.Common;
 using SMT.Domain.Entities;
+using SMT.Domain.Entities.Accounts;
 using SMT.Domain.Entities.Contacts;
 using SMT.Domain.Entities.Inventory;
 using SMT.Domain.Entities.Items;
-using StockoraPOS.Domain.Entities.Contacts;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -24,10 +24,26 @@ namespace SMT.Infrastructure.context
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Vendor> Vendors { get; set; }
 
+        public DbSet<VendorAdjustment>  VendorAdjustments { get; set; }
+        public DbSet<VendorPayment>  VendorPayments { get; set; }
+        public DbSet<VendorLedger>  VendorLedgers { get; set; }
+
+        public DbSet<CustomerAdjustment> CustomerAdjustments { get; set; }
+        public DbSet<CustomerPayment> CustomerPayments { get; set; }
+        public DbSet<CustomerLedger> CustomerLedgers { get; set; }
 
         public DbSet<Purchase> Purchases { get; set; }
         public DbSet<PurchaseItem> PurchaseItems { get; set; }
         public DbSet<PurchaseItemProductSerial> PurchaseItemProductSerials { get; set; }
+
+
+        public DbSet<SaleInvoice> SaleInvoices { get; set; }
+        public DbSet<SaleItem> SaleItems { get; set; }
+        public DbSet<SaleItemProductSerial> SaleItemProductSerials { get; set; }
+
+        public DbSet<Rental> Rentals { get; set; }
+        public DbSet<RentalItem> RentalItems { get; set; }
+
 
         public AppDbContext(DbContextOptions<AppDbContext> options)
           : base(options)

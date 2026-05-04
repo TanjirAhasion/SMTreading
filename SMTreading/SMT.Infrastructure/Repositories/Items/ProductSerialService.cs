@@ -1,4 +1,7 @@
-﻿using SMT.Application.DTO.Items;
+﻿using Humanizer;
+using Microsoft.AspNetCore.Mvc;
+using SMT.Application.DTO.Items;
+using SMT.Application.Helper;
 using SMT.Application.Interfaces.Items;
 using SMT.Domain.Entities.Items;
 using SMT.Domain.Enums;
@@ -63,6 +66,56 @@ namespace SMT.Infrastructure.Repositories.Items
         public Task<bool> DeleteAsync(long id) => repo.DeleteAsync(id);
 
         private static ProductSerialDto Map(ProductSerial x)
-            => new(x.Id, x.SerialNumber, x.ProductId, x.Product.Name,  x.Status.ToString(), x.PurchaseCost, x.SellingCost, x.RentalCost);
+            => new(x.Id, x.SerialNumber, x.ProductId, x.Product.Name, x.Product.Model, x.Product.Brand.Name, x.Status.ToString(), x.PurchaseCost, x.SellingCost, x.RentalCost, x.IsSerialNumberLinkToProduct, x.LinkedProductSerialNumberImageUrl);
+
+        public async Task<bool> UpdateProducSerialLinkedStatusWithImage(
+     [FromForm] UpdateProductSerialLinkedDto dto)
+        {
+            if (dto.File == null || dto.File.Length == 0)
+                throw new Exception("File is required but was not provided.");
+
+            var folderPath = Path.Combine("wwwroot/images/product-serial/");
+
+            if (!Directory.Exists(folderPath))
+                Directory.CreateDirectory(folderPath);
+
+            var fileName = $"{Guid.NewGuid()}{Path.GetExtension(dto.File.FileName)}";
+            var fullPath = Path.Combine(folderPath, fileName);
+
+            using (var stream = new FileStream(fullPath, FileMode.Create))
+            {
+                await dto.File.CopyToAsync(stream);
+            }
+
+            var imageUrl = $"/images/product-serial/{fileName}";
+
+            return await repo.UpdateProducSerialLinkedStatusWithImage(dto.Id, imageUrl);
+        }
+
+        public Task<PagedResult<ProductSerialDto>> GetPagedAsync(int page, int pageSize, string? search)
+        {
+            return repo.GetPagedAsync(page, pageSize, search);
+        }
+
+        public async Task<bool> UnLinkedStatusAndRemoveLinkedImage(long id)
+        {
+            var entity = await repo.GetByIdAsync(id);
+            if (entity == null) return false;
+
+            if (!string.IsNullOrEmpty(entity.LinkedProductSerialNumberImageUrl))
+            {
+                var filePath = Path.Combine("wwwroot", entity.LinkedProductSerialNumberImageUrl.TrimStart('/'));
+                if (File.Exists(filePath))
+                {
+                    File.Delete(filePath);
+                }
+            }
+
+            entity.IsSerialNumberLinkToProduct = false;
+            entity.LinkedProductSerialNumberImageUrl = null;
+
+            await repo.UpdateAsync(entity);
+            return true;
+        }
     }
 }

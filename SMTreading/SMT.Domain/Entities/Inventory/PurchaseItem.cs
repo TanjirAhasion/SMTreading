@@ -17,6 +17,5 @@ namespace SMT.Domain.Entities.Inventory
         public decimal Quantity { get; set; }
         public decimal UnitCost { get; set; }  // 🔥 MAIN SOURCE OF COST
         public decimal DiscountAllocated { get; set; }
-        public decimal TotalCost { get; set; }
     }
 }

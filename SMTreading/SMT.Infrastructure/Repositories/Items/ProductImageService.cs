@@ -8,7 +8,7 @@ using System.Text;
 
 namespace SMT.Infrastructure.Repositories.Items
 {
-    public class ProductImageService(IProductImageRepository repo) : IProductImageService
+    public class ProductImageService(IProductSerialRepository productSerialRepo, IProductImageRepository repo) : IProductImageService
     {
         public async Task<List<ProductImageDto>> GetAllAsync()
         {
@@ -95,12 +95,49 @@ namespace SMT.Infrastructure.Repositories.Items
             return await repo.DeleteAsync(id);
         }
 
-        private static ProductImageDto Map(ProductImage x)
-            => new(x.Id, x.Title, x.ProductSerialId, x.ImageUrl);
-
-        public async Task<List<ProductImage>> GetBySerialIdAsync(long serialId)
+        public async Task<List<ProductImageWithLinkedDto>> GetBySerialIdAsync(long serialId)
         {
-            return await repo.GetBySerialIdAsync(serialId);
+            // Fetch the parent entity to check the linkage flag and URL
+            var entities = await productSerialRepo.GetByIdAsync(serialId);
+
+            var result = new List<ProductImageWithLinkedDto>();
+
+            // 1. Determine if a linked machine image exists
+            bool hasLinkedImage = entities != null &&
+                                  entities.IsSerialNumberLinkToProduct &&
+                                  !string.IsNullOrEmpty(entities.LinkedProductSerialNumberImageUrl);
+
+            // 2. If the serial is linked and has an image, add the primary linked image as the first item
+            if (hasLinkedImage)
+            {
+                result.Add(new ProductImageWithLinkedDto(
+                    entities.Id,
+                    "Linked Machine Image",
+                    serialId,
+                    entities.LinkedProductSerialNumberImageUrl,
+                    IsLinked: true
+                ));
+            }
+
+            // 3. Retrieve additional images from the repository
+            var additionalImages = await repo.GetBySerialIdAsync(serialId);
+
+            // 4. Map additional images and mark them with IsLinked = false
+            result.AddRange(additionalImages.Select(x => new ProductImageWithLinkedDto(
+                x.Id,
+                x.Title,
+                x.ProductSerialId,
+                x.ImageUrl,
+                IsLinked: false
+            )));
+
+            return result;
         }
+
+        private static ProductImageDto Map(ProductImage x)=> new(x.Id, x.Title, x.ProductSerialId, x.ImageUrl);
+
+        private static ProductImageWithLinkedDto MapWithLinked(ProductImage x, ProductImageDto linkImageDto, bool isLinked = false)
+     => new(x.Id, x.Title, x.ProductSerialId, x.ImageUrl, isLinked);
+
     }
 }
