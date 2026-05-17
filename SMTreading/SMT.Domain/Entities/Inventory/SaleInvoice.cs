@@ -48,7 +48,11 @@ namespace SMT.Domain.Entities.Inventory
         [Required]
         public bool IsPaid { get; set; } // e.g., Unpaid, PartPaid, Paid
 
+        public decimal? PaidAmount { get; set; }
+
         [StringLength(500)]
         public string? Note { get; set; }
+
+        public ICollection<SaleItem> Items { get; set; } = new List<SaleItem>();
     }
 }

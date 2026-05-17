@@ -17,7 +17,7 @@ namespace SMT.Application.Interfaces.Items
         Task<long?> UpdateAsync(long id, UpdateProductSerialDto dto); 
         Task<bool> DeleteAsync(long id);
         Task<bool> UpdateProducSerialLinkedStatusWithImage([FromForm] UpdateProductSerialLinkedDto dto);
-        Task<PagedResult<ProductSerialDto>> GetPagedAsync(int page, int pageSize, string? search);
+        Task<PagedResult<ProductSerialDto>> GetPagedAsync(int page, int pageSize, string? search, int? status);
         Task<bool> UnLinkedStatusAndRemoveLinkedImage(long id);
     }
 }

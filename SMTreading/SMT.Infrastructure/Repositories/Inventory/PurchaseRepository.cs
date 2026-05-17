@@ -16,6 +16,42 @@ namespace SMT.Infrastructure.Repositories.Inventory
 
     public class PurchaseRepository(AppDbContext db) : BaseRepository<Purchase>(db), IPurchaseRepository
     {
+        public async Task<PurchaseInvoiceDto?> GetInvoiceByIdAsync(long id)
+        {
+            var purchase = await db.Purchases
+                .Include(p => p.Vendor)
+                .Include(p => p.Items)
+                    .ThenInclude(i => i.Product)
+                        .ThenInclude(p => p.Brand)
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (purchase == null)
+                return null;
+
+            var invoice = new PurchaseInvoiceDto
+            {
+                Id = purchase.Id,
+                PurchaseNumber = purchase.PurchaseNumber,
+                PurchaseDate = purchase.PurchaseDate,
+                SubTotal = purchase.SubTotal,
+                Discount = purchase.Discount,
+                PaidAmount = purchase.PaidAmount ?? 0,
+                VendorFullName =$"{purchase.Vendor.FirstName} {purchase.Vendor.LastName}",
+                CompanyName = purchase.Vendor.CompanyName ?? "",
+                InvoiceItems = purchase.Items.Select(pi => new PurchaseInvoiceItemDto
+                {
+                    Id = pi.Id,
+                    ProductName = pi.Product?.Name ?? "",
+                    Model = pi.Product?.Model ?? "",
+                    BrandName = pi.Product?.Brand?.Name ?? "",
+                    Quantity = pi.Quantity,
+                    UnitCost = pi.UnitCost
+                }).ToList()
+            };
+
+            return invoice;
+        }
+
         public async Task<PagedResult<PurchaseDto>> GetPagedAsync(SearchPurchaseDto dto)
         {
             var baseQuery = db.Purchases
@@ -75,7 +111,7 @@ namespace SMT.Infrastructure.Repositories.Inventory
             // THEN projection (safe & clean)
             var items = pagedData.Select(p => new PurchaseDto
             {
-                Id= p.Id,
+                Id = p.Id,
                 PurchaseNumber = p.PurchaseNumber,
                 PurchaseDate = p.PurchaseDate,
                 SubTotal = p.SubTotal,

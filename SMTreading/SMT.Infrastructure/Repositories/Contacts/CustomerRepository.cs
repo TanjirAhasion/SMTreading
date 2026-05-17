@@ -11,6 +11,6 @@ using System.Threading.Tasks;
 namespace SMT.Infrastructure.Repositories.Contacts
 {
     public class CustomerRepository(AppDbContext db) : BaseRepository<Customer>(db), ICustomerRepository
-    {
+    {        
     }
 }

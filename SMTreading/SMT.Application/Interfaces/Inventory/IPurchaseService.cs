@@ -12,7 +12,7 @@ namespace SMT.Application.Interfaces.Inventory
     public interface IPurchaseService
     {
         Task<long> CreatePurchaseAsync(CreatePurchaseRequest dto);
-        
+        Task<PurchaseInvoiceDto> GetInvoiceByIdAsync(long id);
         Task<PagedResult<PurchaseDto>> GetPagedAsync(SearchPurchaseDto searchPurchaseDto);
     }
 }

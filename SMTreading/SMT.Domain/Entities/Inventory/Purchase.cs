@@ -26,6 +26,7 @@ namespace SMT.Domain.Entities.Inventory
         public decimal SubTotal { get; set; }
 
         public bool IsPaid { get; set; }
+        public decimal? PaidAmount { get; set; }
         public DateTime PurchaseDate { get; set; }
         public ICollection<PurchaseItem> Items { get; set; } = new List<PurchaseItem>();
     }

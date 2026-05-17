@@ -11,8 +11,8 @@ namespace SMT.Application.Interfaces.Inventory
 {
     public interface IPurchaseRepository : IBaseRepository<Purchase>
     {
+        Task<PurchaseInvoiceDto> GetInvoiceByIdAsync(long id);
         Task<PagedResult<PurchaseDto>> GetPagedAsync(SearchPurchaseDto searchPurchaseDto);
-       
         Task UpdateSubTotalAsync(long purchaseId, decimal subTotal);
     }
 }

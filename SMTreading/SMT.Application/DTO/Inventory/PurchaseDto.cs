@@ -27,12 +27,40 @@ namespace SMT.Application.DTO.Inventory
         public decimal SubTotal { get; set; }
         public decimal Discount { get; set; }
         public bool IsPaid { get; set; }
+
+        public decimal? PaidAmount { get; set; } = 0;
         public long VendorId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string CompanyName { get; set; }
         public decimal Amount { get; set; }
         public PaymentMethodEnum PaymentMethod { get; set; }
+    }
+
+    public class PurchaseInvoiceDto
+    {
+        public long Id { get; set; }
+        public string PurchaseNumber { get; set; }
+        public DateTime PurchaseDate { get; set; }
+        public decimal SubTotal { get; set; }
+        public decimal Discount { get; set; }
+        public bool IsPaid { get; set; }
+        public string VendorFullName { get; set; }
+        public string CompanyName { get; set; }
+        public decimal PaidAmount { get; set; }
+        public PaymentMethodEnum PaymentMethod { get; set; }
+        public List<PurchaseInvoiceItemDto> InvoiceItems { get; set; }
+    }
+
+    public class PurchaseInvoiceItemDto
+    {
+        public long Id { get; set; }
+        public string ProductName { get; set; }
+        public string Model { get; set; }
+        public string BrandName { get; set; }
+        public int Quantity { get; set; }
+        public decimal UnitCost { get; set; }
+        public List<string> ProductSerialNumber { get; set; }
     }
 
     public class CreatePurchaseRequest
@@ -42,6 +70,8 @@ namespace SMT.Application.DTO.Inventory
         public decimal Discount { get; set; }
         public decimal PaidAmount { get; set; }
         public DateTime PurchaseDate { get; set; }
+
+        public long CashAccountId { get; set; }
         public List<CreatePurchaseItemRequest> Items { get; set; }
     }
 

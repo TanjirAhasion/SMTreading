@@ -30,16 +30,19 @@ namespace SMT.Infrastructure.Repositories.Items
             var product = await productRepo.GetByIdAsync(dto.ProductId);
             if (product == null)
                 throw new Exception("Product not found. Cannot generate serial.");
-            string generatedSerial = await repo.GenerateUniqueSerialAsync(product.Model);
+            string generatedSerial = await repo.GenerateUniqueSerialAsync(product.Id, product.Brand.Name, product.Model);
 
             var entity = new ProductSerial
             {
                 SerialNumber = generatedSerial,
+                LegacySerial = dto.LegacySerial,
                 ProductId = dto.ProductId,
                 PurchaseCost = dto.PurchaseCost,
                 SellingCost = dto.SellingCost,
                 RentalCost = dto.RentalCost,
                 Status = (ProductSerialStatus)dto.Status, //ProductSerialStatus.InStock,
+                IsOpeningStock = dto.IsOpeningStock,
+                Note=dto.Note,
                 Product = default!
             };
 
@@ -52,11 +55,11 @@ namespace SMT.Infrastructure.Repositories.Items
             var entity = await repo.GetByIdAsync(id);
             if (entity is null) return null;
 
-            entity.SerialNumber = dto.SerialNumber;
-            entity.ProductId = dto.ProductId;
             entity.PurchaseCost = dto.PurchaseCost;
             entity.SellingCost = dto.SellingCost;
             entity.RentalCost = dto.RentalCost;
+            entity.Note = dto.Note;
+            entity.LegacySerial = dto.LegacySerial;
             entity.Status = Enum.Parse<ProductSerialStatus>(dto.Status);
 
             await repo.UpdateAsync(entity);
@@ -92,9 +95,9 @@ namespace SMT.Infrastructure.Repositories.Items
             return await repo.UpdateProducSerialLinkedStatusWithImage(dto.Id, imageUrl);
         }
 
-        public Task<PagedResult<ProductSerialDto>> GetPagedAsync(int page, int pageSize, string? search)
+        public Task<PagedResult<ProductSerialDto>> GetPagedAsync(int page, int pageSize, string? search, int? status)
         {
-            return repo.GetPagedAsync(page, pageSize, search);
+            return repo.GetPagedAsync(page, pageSize, search, status);
         }
 
         public async Task<bool> UnLinkedStatusAndRemoveLinkedImage(long id)

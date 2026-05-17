@@ -35,7 +35,8 @@ namespace SMT.Infrastructure.Repositories.Accounts
                 SourceId = dto.SourceId,
                 Credit = dto.Credit,
                 Debit = dto.Debit,
-                Balance = newBalance
+                Balance = newBalance,
+                Description = dto.Description
             };
 
             await db.Set<VendorLedger>().AddAsync(entity);

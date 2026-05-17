@@ -18,6 +18,10 @@ namespace SMT.Domain.Entities.Items
         [StringLength(255)]
         public required string SerialNumber { get; set; }
 
+        [StringLength(200)]
+        // Old business serial / sticker / handwritten serial
+        public string? LegacySerial { get; set; }
+
         [Required]
         public long ProductId { get; set; }
 
@@ -27,15 +31,14 @@ namespace SMT.Domain.Entities.Items
         public ProductSerialStatus Status { get; set; } = ProductSerialStatus.InStock;
 
         [Required]
-        [Column(TypeName = "decimal(8,2)")]
+        [Column(TypeName = "decimal(10,2)")]
         public decimal PurchaseCost { get; set; }
 
-        [Column(TypeName = "decimal(8,2)")]
+        [Column(TypeName = "decimal(10,2)")]
         public decimal SellingCost { get; set; }
 
-        [Column(TypeName = "decimal(8,2)")]
+        [Column(TypeName = "decimal(10,2)")]
         public decimal RentalCost { get; set; }
-
         public string? BatchNumber { get; set; }
         public DateTime? PurchaseDate { get; set; }
 
@@ -46,6 +49,13 @@ namespace SMT.Domain.Entities.Items
         public bool IsSerialNumberLinkToProduct {  get; set; }
 
         public string? LinkedProductSerialNumberImageUrl { get; set; } = string.Empty;
+
+        public long? CurrentRentalContractId { get; set; }
+
+        public long? SaleInvoiceId { get; set; }
+
+        public bool? IsOpeningStock { get; set; }
+
         // Navigation property: One brand can have many products
         public virtual ICollection<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
     }

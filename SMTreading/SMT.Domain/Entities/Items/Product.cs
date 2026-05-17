@@ -1,5 +1,6 @@
 ﻿
 using SMT.Domain.Common;
+using SMT.Domain.Entities.Inventory;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -42,5 +43,6 @@ namespace SMT.Domain.Entities.Items
 
         // Navigation property: One brand can have many products
         public virtual ICollection<ProductSerial> ProductSerials { get; set; } = new List<ProductSerial>();
+        public virtual ICollection<PurchaseItem> PurchaseItems { get; set; } = new List<PurchaseItem>();
     }
 }

@@ -28,5 +28,8 @@ namespace SMT.Domain.Entities.Accounts
         public decimal Credit { get; set; }  // Payment/discount reduces payable
 
         public decimal Balance { get; set; } // running balance
+
+        [StringLength(200)]
+        public string? Description { get; set; }
     }
 }

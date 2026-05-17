@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SMT.Application.DTO.Items;
+using SMT.Application.Helper;
 using SMT.Application.Interfaces.Items;
 
 namespace SMTreading.api.Controllers.Items
@@ -15,6 +16,15 @@ namespace SMTreading.api.Controllers.Items
         public async Task<IActionResult> GetAll()
         {
             return Ok(await service.GetAllAsync());
+        }
+
+        [HttpGet("GetAllBySearchWithPagination")]
+        public async Task<ActionResult<PagedResult<ProductListDto>>> GetAllBySearchWithPagination(
+       [FromQuery] int page = 1, [FromQuery] int pageSize = 10,
+       [FromQuery] string? search = null, [FromQuery] int? status = null)
+        {
+            var result = await service.GetPagedAsync(page, pageSize, search, status);
+            return Ok(result);
         }
 
         [HttpGet("{id:long}")]

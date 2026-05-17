@@ -2,9 +2,12 @@
 using SMT.Domain.Common;
 using SMT.Domain.Entities;
 using SMT.Domain.Entities.Accounts;
+using SMT.Domain.Entities.CashManagement;
 using SMT.Domain.Entities.Contacts;
 using SMT.Domain.Entities.Inventory;
+using SMT.Domain.Entities.Inventory.Rental;
 using SMT.Domain.Entities.Items;
+using SMT.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -24,9 +27,9 @@ namespace SMT.Infrastructure.context
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Vendor> Vendors { get; set; }
 
-        public DbSet<VendorAdjustment>  VendorAdjustments { get; set; }
-        public DbSet<VendorPayment>  VendorPayments { get; set; }
-        public DbSet<VendorLedger>  VendorLedgers { get; set; }
+        public DbSet<VendorAdjustment> VendorAdjustments { get; set; }
+        public DbSet<VendorPayment> VendorPayments { get; set; }
+        public DbSet<VendorLedger> VendorLedgers { get; set; }
 
         public DbSet<CustomerAdjustment> CustomerAdjustments { get; set; }
         public DbSet<CustomerPayment> CustomerPayments { get; set; }
@@ -41,9 +44,18 @@ namespace SMT.Infrastructure.context
         public DbSet<SaleItem> SaleItems { get; set; }
         public DbSet<SaleItemProductSerial> SaleItemProductSerials { get; set; }
 
-        public DbSet<Rental> Rentals { get; set; }
-        public DbSet<RentalItem> RentalItems { get; set; }
 
+        public DbSet<RentalContract> RentalContracts { get; set; }
+        public DbSet<RentalContractItem> RentalContractItems { get; set; }
+        public DbSet<RentalInvoice> RentalInvoices { get; set; }
+        public DbSet<RentalInvoiceItem> RentalItems { get; set; }
+        public DbSet<RentalItemProductSerial> RentalItemProductSerials { get; set; }
+
+        public DbSet<CashAccount> CashAccounts { get; set; }
+        public DbSet<CashTransaction> CashTransactions { get; set; }
+        public DbSet<ExpenseCategory> ExpenseCategories { get; set; }
+        public DbSet<Expense> Expenses { get; set; }
+        public DbSet<CashTransfer> CashTransfers { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options)
           : base(options)
@@ -108,6 +120,35 @@ namespace SMT.Infrastructure.context
                 entity.Property(e => e.ImageUrl).IsRequired().HasMaxLength(200);
                 entity.Property(e => e.Title).IsRequired().HasMaxLength(100);
             });
+
+            modelBuilder.Entity<SaleItem>()
+                .HasOne(si => si.SaleInvoice)
+                .WithMany(s => s.Items)
+                .HasForeignKey(si => si.SaleId);
+
+            // 2. Configure CashTransfers (Handling Multiple Foreign Keys)
+            modelBuilder.Entity<CashTransfer>(entity =>
+            {
+                entity.HasOne(d => d.FromAccount)
+                    .WithMany()
+                    .HasForeignKey(d => d.FromCashAccountId)
+                    .OnDelete(DeleteBehavior.Restrict); // Prevent cascading deletes
+
+                entity.HasOne(d => d.ToAccount)
+                    .WithMany()
+                    .HasForeignKey(d => d.ToCashAccountId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            // 3. Decimal Precision Configuration
+            // Standardizing all decimal fields to (18,2)
+            foreach (var property in modelBuilder.Model.GetEntityTypes()
+                .SelectMany(t => t.GetProperties())
+                .Where(p => p.ClrType == typeof(decimal) || p.ClrType == typeof(decimal?)))
+            {
+                property.SetPrecision(18);
+                property.SetScale(2);
+            }
         }
         public override int SaveChanges() => SaveChangesAsync().GetAwaiter().GetResult();
 

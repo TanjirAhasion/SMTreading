@@ -1,8 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.CodeAnalysis;
+using Microsoft.EntityFrameworkCore;
 using SMT.Application.DTO.Items;
 using SMT.Application.Helper;
 using SMT.Application.Interfaces.Items;
 using SMT.Domain.Entities.Items;
+using SMT.Domain.Enums;
 using SMT.Infrastructure.Common;
 using SMT.Infrastructure.context;
 using SMT.Infrastructure.Services;
@@ -12,14 +14,15 @@ using System.Text;
 
 namespace SMT.Infrastructure.Repositories.Items
 {
-    public class ProductSerialRepository(AppDbContext db) :BaseRepository<ProductSerial>(db), IProductSerialRepository
+    public class ProductSerialRepository(AppDbContext db) : BaseRepository<ProductSerial>(db), IProductSerialRepository
     {
-        public async Task<string> GenerateUniqueSerialAsync(string modelNumber)
+        public async Task<string> GenerateUniqueSerialAsync(long productId, string brandName, string modelNumber)
         {
             string serial;
             do
             {
-                serial = GeneratedProductSerial.Generate(modelNumber);
+                var uniquePart = Guid.NewGuid().ToString("N")[..6].ToUpper();
+                serial = GeneratedProductSerial.Generate(brandName, modelNumber, uniquePart);
             }
             while (await IsSerialNumberExistsAsync(serial));
 
@@ -34,15 +37,16 @@ namespace SMT.Infrastructure.Repositories.Items
                 .ToListAsync();
         }
 
-       
+
 
         public async Task<PagedResult<ProductSerialDto>> GetPagedAsync(
      int page,
      int pageSize,
-     string? search)
+     string? search,
+        int? status)
         {
             if (page <= 0) page = 1;
-            if (pageSize <= 0) pageSize = 10;   
+            if (pageSize <= 0) pageSize = 10;
             search = search?.Trim();
 
             var baseQuery = db.ProductSerials
@@ -53,7 +57,8 @@ namespace SMT.Infrastructure.Repositories.Items
                 );
 
             // Optional: filter only available stock
-            // baseQuery = baseQuery.Where(ps => ps.Status == ProductSerialStatus.InStock);
+            if (status != null)
+                baseQuery = baseQuery.Where(ps => ps.Status == (ProductSerialStatus)status);
 
             var totalCount = await baseQuery.CountAsync();
 
@@ -103,16 +108,16 @@ namespace SMT.Infrastructure.Repositories.Items
 
         public Task<bool> IsSerialNumberExistsAsync(string serialNumber)
         {
-           return db.ProductSerials.AnyAsync(ps => ps.SerialNumber == serialNumber);
+            return db.ProductSerials.AnyAsync(ps => ps.SerialNumber == serialNumber);
         }
 
         public async Task<bool> UpdateProducSerialLinkedStatusWithImage(long id, string linkedURL)
         {
-           var result = await db.ProductSerials.Where(ps => ps.Id == id)
-                .ExecuteUpdateAsync(ps => ps
-                    .SetProperty(p => p.IsSerialNumberLinkToProduct, !string.IsNullOrEmpty(linkedURL))
-                    .SetProperty(p => p.LinkedProductSerialNumberImageUrl, linkedURL));
-           return result > 0;
+            var result = await db.ProductSerials.Where(ps => ps.Id == id)
+                 .ExecuteUpdateAsync(ps => ps
+                     .SetProperty(p => p.IsSerialNumberLinkToProduct, !string.IsNullOrEmpty(linkedURL))
+                     .SetProperty(p => p.LinkedProductSerialNumberImageUrl, linkedURL));
+            return result > 0;
         }
 
         public async Task<List<ProductSerial>> GetBySerialNumbersAsync(List<string> serials)
@@ -132,6 +137,13 @@ namespace SMT.Infrastructure.Repositories.Items
         {
             db.ProductSerials.UpdateRange(serials);
             await db.SaveChangesAsync();
+        }
+
+        public Task<List<ProductSerial>> GetByProductSerialIdsAsync(List<long> productSerialIds)
+        {
+            return db.ProductSerials
+                .Where(ps => productSerialIds.Contains(ps.Id))
+                .ToListAsync();
         }
     }
 }

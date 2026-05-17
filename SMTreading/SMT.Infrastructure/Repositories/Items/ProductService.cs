@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SMT.Application.DTO.Items;
+using SMT.Application.Helper;
 using SMT.Application.Interfaces.Items;
 using SMT.Domain.Entities.Items;
 using System;
@@ -12,7 +13,12 @@ namespace SMT.Infrastructure.Repositories.Items
     {
         public async Task<List<ProductDto>> GetAllAsync() =>
             (await repo.GetAllWithBrandsAsync()).Select(x => new ProductDto(x.Id, x.Name, x.Model, x.BrandId, x.Brand.Name, x.DefaultSalePrice, x.DefaultRentPrice,x.LowStockThreshold, x.IsActive)).ToList();
-      
+
+        public Task<PagedResult<ProductListDto>> GetPagedAsync(int page, int pageSize, string? search, int? status)
+        {
+            return repo.GetPagedAsync(page, pageSize, search, status);
+        }
+
         public async Task<ProductDto?> GetByIdAsync(long id)
         {
             var x = await repo.GetByIdAsync(id);

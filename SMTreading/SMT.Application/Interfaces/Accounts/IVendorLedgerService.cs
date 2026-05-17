@@ -12,6 +12,7 @@ namespace SMT.Application.Interfaces.Accounts
         Task<List<VendorLedgerDto>> GetAllAsync();
         Task<VendorLedgerDto?> GetByIdAsync(long id);
         Task<long> CreateAsync(VendorLedgerDto dto);
+
         //Task<bool> UpdateAsync(long id, VendorLedgerDto dto);
         Task<bool> DeleteAsync(long id);
     }

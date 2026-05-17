@@ -1,11 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Humanizer;
+using Microsoft.EntityFrameworkCore;
 using SMT.Application.DTO.Accounts;
+using SMT.Application.DTO.CashManagement;
 using SMT.Application.DTO.Inventory;
 using SMT.Application.Helper;
 using SMT.Application.Interfaces.Accounts;
+using SMT.Application.Interfaces.CashManagement;
 using SMT.Application.Interfaces.Inventory;
 using SMT.Application.Interfaces.Items;
 using SMT.Domain.Entities.Accounts;
+using SMT.Domain.Entities.CashManagement;
 using SMT.Domain.Entities.Inventory;
 using SMT.Domain.Entities.Items;
 using SMT.Domain.Enums;
@@ -30,6 +34,7 @@ namespace SMT.Infrastructure.Repositories.Inventory
         private readonly IProductRepository _productRepo;
         private readonly IProductSerialRepository _productSerialRepo;
 
+        private readonly ICashTransactionService _cashTransactionService;
         public PurchaseService(
             IPurchaseRepository purchaseRepo,
             IPurchaseItemRepository purchaseItemRepo,
@@ -37,7 +42,8 @@ namespace SMT.Infrastructure.Repositories.Inventory
             IVendorPaymentService vendorPaymentService,
             IVendorLedgerRepository vendorLedgerRepo,
             IProductRepository productRepo,
-            IProductSerialRepository productSerialRepo)
+            IProductSerialRepository productSerialRepo,
+            ICashTransactionService cashTransactionService)
         {
             _purchaseRepo = purchaseRepo;
             _purchaseItemRepo = purchaseItemRepo;
@@ -46,7 +52,7 @@ namespace SMT.Infrastructure.Repositories.Inventory
             _vendorLedgerRepo = vendorLedgerRepo;
             _productRepo = productRepo;
             _productSerialRepo = productSerialRepo;
-
+            _cashTransactionService = cashTransactionService;
         }
 
         public async Task<long> CreatePurchaseAsync(CreatePurchaseRequest request)
@@ -60,9 +66,10 @@ namespace SMT.Infrastructure.Repositories.Inventory
                 {
                     VendorId = request.VendorId,
                     PurchaseNumber = $"PUR-{DateTime.UtcNow.Ticks}",
-                    PurchaseDate = DateTime.UtcNow,
+                    PurchaseDate = request.PurchaseDate,
                     Discount = request.Discount,
                     SubTotal = 0,
+                    PaidAmount = request.PaidAmount,
                     IsPaid = false
                 };
 
@@ -111,7 +118,7 @@ namespace SMT.Infrastructure.Repositories.Inventory
 
                     for (int i = 0; i < item.Quantity; i++)
                     {
-                        var serial = await GenerateUniqueSerialAsync(product.Model);
+                        var serial = await _productSerialRepo.GenerateUniqueSerialAsync(product.Id, product.Brand.Name, product.Model);
 
                         productSerials.Add(new ProductSerial
                         {
@@ -176,6 +183,17 @@ namespace SMT.Infrastructure.Repositories.Inventory
                 // 8. Payment (if any)
                 if (request.PaidAmount > 0)
                 {
+                    await _cashTransactionService.CreateAsync(new CashTransactionDto
+                    {
+                        CashAccountId = request.CashAccountId,
+                        Amount = request.PaidAmount,
+                        TransactionDate = DateTime.UtcNow,
+                        TransactionType = (int)TransactionType.CashOut,
+                        SourceType = (int)TransactionSource.PurchasePayment,
+                        ReferenceId = purchase.Id,
+                        Note = $"Payment for Purchase #{purchase.PurchaseNumber}"
+                    });
+
                     var paymentId = await _vendorPaymentService.CreateAsync(new VendorPaymentDto
                     {
                         VendorId = request.VendorId,
@@ -191,7 +209,8 @@ namespace SMT.Infrastructure.Repositories.Inventory
                         SourceType = VendorLedgerSourceType.Purchase,
                         SourceId = paymentId,
                         Credit = request.PaidAmount,
-                        Debit = 0
+                        Debit = 0,
+                        Description = $"Payment for Purchase #{purchase.PurchaseNumber}"
                     });
                 }
 
@@ -206,15 +225,20 @@ namespace SMT.Infrastructure.Repositories.Inventory
             }
         }
 
+        public Task<PurchaseInvoiceDto> GetInvoiceByIdAsync(long id)
+        {
+            return _purchaseRepo.GetInvoiceByIdAsync(id);
+        }
+
         public async Task<PagedResult<PurchaseDto>> GetPagedAsync(SearchPurchaseDto searchPurchaseDto)
         {
             return await _purchaseRepo.GetPagedAsync(searchPurchaseDto);
         }
 
-        private async Task<string> GenerateUniqueSerialAsync(string modelNumber)
-        {
-            string serial = await _productSerialRepo.GenerateUniqueSerialAsync(modelNumber);
-            return serial;
-        }
+        //private async Task<string> GenerateUniqueSerialAsync(string modelNumber)
+        //{
+        //    string serial = await _productSerialRepo.GenerateUniqueSerialAsync(modelNumber);
+        //    return serial;
+        //}
     }
 }

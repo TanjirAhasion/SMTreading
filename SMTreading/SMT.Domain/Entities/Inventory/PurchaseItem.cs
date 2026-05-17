@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SMT.Domain.Entities.Items;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -14,8 +15,11 @@ namespace SMT.Domain.Entities.Inventory
         public long PurchaseId { get; set; }
         public Purchase Purchase { get; set; }
         public long ProductId { get; set; }
-        public decimal Quantity { get; set; }
+        public Product Product { get; set; }
+
+        public int Quantity { get; set; }
         public decimal UnitCost { get; set; }  // 🔥 MAIN SOURCE OF COST
         public decimal DiscountAllocated { get; set; }
+
     }
 }

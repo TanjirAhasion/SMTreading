@@ -38,12 +38,13 @@ namespace SMTreading.api.Controllers.Inventory
             var result = await _service.GetPagedAsync(searchPurchaseDto);
             return Ok(result);
         }
-        //[HttpGet("{id}")]
-        //public async Task<IActionResult> Get(long id)
-        //{
-        //    var result = await _service.GetByIdAsync(id);
-        //    if (result == null) return NotFound();
-        //    return Ok(result);
-        //}
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(long id)
+        {
+            var result = await _service.GetInvoiceByIdAsync(id);
+            if (result == null) return NotFound();
+            return Ok(result);
+        }
     }
 }

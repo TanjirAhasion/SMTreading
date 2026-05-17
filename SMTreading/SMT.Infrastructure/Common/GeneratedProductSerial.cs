@@ -8,10 +8,26 @@ namespace SMT.Infrastructure.Common
 {
     public static class GeneratedProductSerial
     {
-        public static string Generate(string modelNumber)
+        public static string Generate(string brandName, string modelNumber, string sequence)
         {
-            var shortGuid = Guid.NewGuid().ToString("N")[..8].ToUpper();
-            return $"{modelNumber}#GU#{shortGuid}";
+            var brand = Normalize(brandName);
+            var model = Normalize(modelNumber);
+
+            return $"{brand}-{model}_{sequence:D6}";
+        }
+
+        private static string Normalize(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                return string.Empty;
+
+            return value
+                .Trim()
+                .ToUpper()
+                .Replace(" ", "")
+                .Replace("/", "")
+                .Replace("\\", "")
+                .Replace("_", "-");
         }
     }
 }

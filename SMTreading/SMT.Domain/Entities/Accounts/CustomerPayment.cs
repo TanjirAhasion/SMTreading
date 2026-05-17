@@ -1,6 +1,7 @@
 ﻿using SMT.Domain.Common;
 using SMT.Domain.Entities.Contacts;
 using SMT.Domain.Entities.Inventory;
+using SMT.Domain.Entities.Inventory.Rental;
 using SMT.Domain.Enums;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,11 @@ namespace SMT.Domain.Entities.Accounts
 
         public long? SaleId { get; set; } // NULL = advance payment
         public SaleInvoice? Sale { get; set; }
+
+        public long? RentalId { get; set; } // NULL = advance payment
+        public RentalInvoice? Rental { get; set; }
+
+        public CustomerPaymentType CustomerPaymentType { get; set; }
 
         public decimal Amount { get; set; }
 

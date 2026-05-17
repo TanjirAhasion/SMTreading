@@ -16,9 +16,9 @@ namespace SMTreading.api.Controllers.Items
         [HttpGet("GetAllBySearchWithPagination")]
         public async Task<ActionResult<PagedResult<ProductSerialDto>>> GetAllBySearchWithPagination(
          [FromQuery] int page = 1, [FromQuery] int pageSize = 10,
-         [FromQuery] string? search = null)
+         [FromQuery] string? search = null, [FromQuery] int? status = null)
         {
-            var result = await service.GetPagedAsync(page, pageSize, search);
+            var result = await service.GetPagedAsync(page, pageSize, search, status);
             return Ok(result);
         }
 
@@ -41,7 +41,13 @@ namespace SMTreading.api.Controllers.Items
             var item = await service.UpdateAsync(id, dto);
             return item is null ? NotFound() : Ok(item);
         }
-        
+
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> UpdateProductSerial(long id, string Status)
+        //{
+        //    var item = await service.UpdateAsync(id, dto);
+        //    return item is null ? NotFound() : Ok(item);
+        //}
         [HttpDelete("{id:long}")]
         public async Task<IActionResult> Delete(long id) => (await service.DeleteAsync(id)) ? Ok() : NotFound();
 

@@ -18,8 +18,18 @@ namespace SMT.Domain.Enums
 
     public enum CustomerLedgerSourceType
     {
-        Purchase = 1,
+        Sale = 1,
         Payment = 2,
-        Adjustment = 3
+        Rental = 3,
+        RentalContractSecurityDeposit = 4,
+        Adjustment = 5
+
+    }
+
+    public enum CustomerPaymentType
+    {
+        Sale = 1,
+        Rental = 2,
+        Advance = 3
     }
 }

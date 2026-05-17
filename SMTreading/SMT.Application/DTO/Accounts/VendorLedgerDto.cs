@@ -18,5 +18,7 @@ namespace SMT.Application.DTO.Accounts
         public decimal Debit { get; set; }   // Purchase increases payable
         public decimal Credit { get; set; }  // Payment/discount reduces payable
         public decimal Balance { get; set; } // running balance
+
+        public string? Description { get; set; }
     }
 }
