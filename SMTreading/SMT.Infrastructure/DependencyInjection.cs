@@ -51,6 +51,7 @@ namespace SMT.Infrastructure
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<ICustomerLedgerRepository, CustomerLedgerRepository>();
             services.AddScoped<ICustomerPaymentRepository, CustomerPaymentRepository>();
+            services.AddScoped<ICustomerPaymentService, CustomerPaymentService>();
 
             services.AddScoped<IPurchaseRepository, PurchaseRepository>();
             services.AddScoped<IPurchaseItemRepository, PurchaseItemRepository>();

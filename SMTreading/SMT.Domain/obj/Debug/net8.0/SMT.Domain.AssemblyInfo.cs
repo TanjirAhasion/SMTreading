@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SMT.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0de7c4dfd3186143c68f086d503f335f5bc9648")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10198337feef63e83a8d6a1ca602d54b4506d809")]
 [assembly: System.Reflection.AssemblyProductAttribute("SMT.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SMT.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

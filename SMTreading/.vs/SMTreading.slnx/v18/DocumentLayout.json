@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.infrastructure\\repositories\\inventory\\saleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|solutionrelative:smt.infrastructure\\repositories\\inventory\\saleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.infrastructure\\auth\\commands\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|solutionrelative:smt.infrastructure\\auth\\commands\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD6364A-AC78-8A51-90FC-146370520FCA}|SMTreading.api\\SMTreading.api.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smtreading.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD6364A-AC78-8A51-90FC-146370520FCA}|SMTreading.api\\SMTreading.api.csproj|solutionrelative:smtreading.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.infrastructure\\auth\\commands\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|solutionrelative:smt.infrastructure\\auth\\commands\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|solutionrelative:smt.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.infrastructure\\repositories\\inventory\\rental\\rentalcontractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -119,10 +131,6 @@
       "RelativeMoniker": "D:0:0:{DBD6364A-AC78-8A51-90FC-146370520FCA}|SMTreading.api\\SMTreading.api.csproj|solutionrelative:smtreading.api\\controllers\\contacts\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|solutionrelative:smt.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{27D48CA3-4A73-F6B8-F263-C00E8B801F97}|SMT.Application\\SMT.Application.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.application\\dto\\cashmanagement\\expensecategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27D48CA3-4A73-F6B8-F263-C00E8B801F97}|SMT.Application\\SMT.Application.csproj|solutionrelative:smt.application\\dto\\cashmanagement\\expensecategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -201,10 +209,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{27D48CA3-4A73-F6B8-F263-C00E8B801F97}|SMT.Application\\SMT.Application.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.application\\interfaces\\inventory\\isalerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27D48CA3-4A73-F6B8-F263-C00E8B801F97}|SMT.Application\\SMT.Application.csproj|solutionrelative:smt.application\\interfaces\\inventory\\isalerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27D48CA3-4A73-F6B8-F263-C00E8B801F97}|SMT.Application\\SMT.Application.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.application\\interfaces\\inventory\\isaleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27D48CA3-4A73-F6B8-F263-C00E8B801F97}|SMT.Application\\SMT.Application.csproj|solutionrelative:smt.application\\interfaces\\inventory\\isaleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27D48CA3-4A73-F6B8-F263-C00E8B801F97}|SMT.Application\\SMT.Application.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.application\\interfaces\\inventory\\ipurchaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -431,36 +435,16 @@
       "RelativeMoniker": "D:0:0:{DBD6364A-AC78-8A51-90FC-146370520FCA}|SMTreading.api\\SMTreading.api.csproj|solutionrelative:smtreading.api\\smtreading.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27D48CA3-4A73-F6B8-F263-C00E8B801F97}|SMT.Application\\SMT.Application.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.application\\auth\\dto\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27D48CA3-4A73-F6B8-F263-C00E8B801F97}|SMT.Application\\SMT.Application.csproj|solutionrelative:smt.application\\auth\\dto\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{666FA9DE-0470-3453-8C74-340F79926677}|SMT.Domain\\SMT.Domain.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.domain\\enums\\userstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{666FA9DE-0470-3453-8C74-340F79926677}|SMT.Domain\\SMT.Domain.csproj|solutionrelative:smt.domain\\enums\\userstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.infrastructure\\auth\\commands\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|solutionrelative:smt.infrastructure\\auth\\commands\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27D48CA3-4A73-F6B8-F263-C00E8B801F97}|SMT.Application\\SMT.Application.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.application\\auth\\interfaces\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27D48CA3-4A73-F6B8-F263-C00E8B801F97}|SMT.Application\\SMT.Application.csproj|solutionrelative:smt.application\\auth\\interfaces\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.infrastructure\\auth\\commands\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|solutionrelative:smt.infrastructure\\auth\\commands\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27D48CA3-4A73-F6B8-F263-C00E8B801F97}|SMT.Application\\SMT.Application.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.application\\dto\\identity\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27D48CA3-4A73-F6B8-F263-C00E8B801F97}|SMT.Application\\SMT.Application.csproj|solutionrelative:smt.application\\dto\\identity\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.infrastructure\\auth\\commands\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1037DE06-6799-740F-72F7-F2380AF23B30}|SMT.Infrastructure\\SMT.Infrastructure.csproj|solutionrelative:smt.infrastructure\\auth\\commands\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27D48CA3-4A73-F6B8-F263-C00E8B801F97}|SMT.Application\\SMT.Application.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.application\\auth\\dto\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27D48CA3-4A73-F6B8-F263-C00E8B801F97}|SMT.Application\\SMT.Application.csproj|solutionrelative:smt.application\\auth\\dto\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{666FA9DE-0470-3453-8C74-340F79926677}|SMT.Domain\\SMT.Domain.csproj|d:\\project\\sm trading\\smtrading\\smtreading\\smt.domain\\enums\\tenantstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -482,115 +466,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ExpenseController.cs",
-              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\CashManagement\\ExpenseController.cs",
-              "RelativeDocumentMoniker": "SMTreading.api\\Controllers\\CashManagement\\ExpenseController.cs",
-              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\CashManagement\\ExpenseController.cs",
-              "RelativeToolTip": "SMTreading.api\\Controllers\\CashManagement\\ExpenseController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAewBoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T09:19:24.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ExpenseService.cs",
-              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\CashManagemant\\ExpenseService.cs",
-              "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\CashManagemant\\ExpenseService.cs",
-              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\CashManagemant\\ExpenseService.cs",
-              "RelativeToolTip": "SMT.Infrastructure\\Repositories\\CashManagemant\\ExpenseService.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAAACUAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T19:45:21.696Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IPurchaseService.cs",
-              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\IPurchaseService.cs",
-              "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Inventory\\IPurchaseService.cs",
-              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\IPurchaseService.cs",
-              "RelativeToolTip": "SMT.Application\\Interfaces\\Inventory\\IPurchaseService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T20:11:10.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IProductSerialRepository.cs",
-              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Items\\IProductSerialRepository.cs",
-              "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Items\\IProductSerialRepository.cs",
-              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Items\\IProductSerialRepository.cs",
-              "RelativeToolTip": "SMT.Application\\Interfaces\\Items\\IProductSerialRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAjwA4AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T14:03:09.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductSerialRepository.cs",
-              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Items\\ProductSerialRepository.cs",
-              "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Items\\ProductSerialRepository.cs",
-              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Items\\ProductSerialRepository.cs",
-              "RelativeToolTip": "SMT.Infrastructure\\Repositories\\Items\\ProductSerialRepository.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAswCEAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T20:42:52.633Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SaleService.cs",
-              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\SaleService.cs",
-              "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Inventory\\SaleService.cs",
-              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\SaleService.cs",
-              "RelativeToolTip": "SMT.Infrastructure\\Repositories\\Inventory\\SaleService.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAAAJkAAABhAAAAAAAAAA==",
+              "Title": "LoginCommandHandler.cs",
+              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Auth\\Commands\\LoginCommandHandler.cs",
+              "RelativeDocumentMoniker": "SMT.Infrastructure\\Auth\\Commands\\LoginCommandHandler.cs",
+              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Auth\\Commands\\LoginCommandHandler.cs",
+              "RelativeToolTip": "SMT.Infrastructure\\Auth\\Commands\\LoginCommandHandler.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowDMAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T20:14:56.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PurchaseService.cs",
-              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\PurchaseService.cs",
-              "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Inventory\\PurchaseService.cs",
-              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\PurchaseService.cs",
-              "RelativeToolTip": "SMT.Infrastructure\\Repositories\\Inventory\\PurchaseService.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAAAHgAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T20:01:20.611Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PurchaseController.cs",
-              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\Inventory\\PurchaseController.cs",
-              "RelativeDocumentMoniker": "SMTreading.api\\Controllers\\Inventory\\PurchaseController.cs",
-              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\Inventory\\PurchaseController.cs",
-              "RelativeToolTip": "SMTreading.api\\Controllers\\Inventory\\PurchaseController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAhwBYAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T13:14:35.71Z",
+              "WhenOpened": "2026-05-19T21:15:08.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "SMTreading.api\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "SMTreading.api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T21:10:36.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "RentalContractService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\Rental\\RentalContractService.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Inventory\\Rental\\RentalContractService.cs",
@@ -603,7 +509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Items\\ProductRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Items\\ProductRepository.cs",
@@ -611,12 +517,122 @@
               "RelativeToolTip": "SMT.Infrastructure\\Repositories\\Items\\ProductRepository.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T20:13:20.294Z",
+              "WhenOpened": "2026-05-14T20:13:20.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "SMT.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "SMT.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAgwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T23:34:06.016Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "ExpenseService.cs",
+              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\CashManagemant\\ExpenseService.cs",
+              "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\CashManagemant\\ExpenseService.cs",
+              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\CashManagemant\\ExpenseService.cs",
+              "RelativeToolTip": "SMT.Infrastructure\\Repositories\\CashManagemant\\ExpenseService.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAACUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T19:45:21.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ExpenseController.cs",
+              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\CashManagement\\ExpenseController.cs",
+              "RelativeDocumentMoniker": "SMTreading.api\\Controllers\\CashManagement\\ExpenseController.cs",
+              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\CashManagement\\ExpenseController.cs",
+              "RelativeToolTip": "SMTreading.api\\Controllers\\CashManagement\\ExpenseController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAewBoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T09:19:24.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductSerialRepository.cs",
+              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Items\\ProductSerialRepository.cs",
+              "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Items\\ProductSerialRepository.cs",
+              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Items\\ProductSerialRepository.cs",
+              "RelativeToolTip": "SMT.Infrastructure\\Repositories\\Items\\ProductSerialRepository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAswCEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T20:42:52.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IProductSerialRepository.cs",
+              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Items\\IProductSerialRepository.cs",
+              "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Items\\IProductSerialRepository.cs",
+              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Items\\IProductSerialRepository.cs",
+              "RelativeToolTip": "SMT.Application\\Interfaces\\Items\\IProductSerialRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAjwA4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T14:03:09.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PurchaseController.cs",
+              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\Inventory\\PurchaseController.cs",
+              "RelativeDocumentMoniker": "SMTreading.api\\Controllers\\Inventory\\PurchaseController.cs",
+              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\Inventory\\PurchaseController.cs",
+              "RelativeToolTip": "SMTreading.api\\Controllers\\Inventory\\PurchaseController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAhwBYAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T13:14:35.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginCommand.cs",
+              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Auth\\Commands\\LoginCommand.cs",
+              "RelativeDocumentMoniker": "SMT.Infrastructure\\Auth\\Commands\\LoginCommand.cs",
+              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Auth\\Commands\\LoginCommand.cs",
+              "RelativeToolTip": "SMT.Infrastructure\\Auth\\Commands\\LoginCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T20:49:06.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PurchaseService.cs",
+              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\PurchaseService.cs",
+              "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Inventory\\PurchaseService.cs",
+              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\PurchaseService.cs",
+              "RelativeToolTip": "SMT.Infrastructure\\Repositories\\Inventory\\PurchaseService.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAAHgAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T20:01:20.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IPurchaseService.cs",
+              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\IPurchaseService.cs",
+              "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Inventory\\IPurchaseService.cs",
+              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\IPurchaseService.cs",
+              "RelativeToolTip": "SMT.Application\\Interfaces\\Inventory\\IPurchaseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T20:11:10.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "GeneratedProductSerial.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Common\\GeneratedProductSerial.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Common\\GeneratedProductSerial.cs",
@@ -624,12 +640,11 @@
               "RelativeToolTip": "SMT.Infrastructure\\Common\\GeneratedProductSerial.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T20:23:02.382Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T20:23:02.382Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "PurchaseDto.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\DTO\\Inventory\\PurchaseDto.cs",
               "RelativeDocumentMoniker": "SMT.Application\\DTO\\Inventory\\PurchaseDto.cs",
@@ -637,12 +652,11 @@
               "RelativeToolTip": "SMT.Application\\DTO\\Inventory\\PurchaseDto.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAAAzwEkAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T19:19:10.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T19:19:10.491Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "RentalContractDto.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\DTO\\Inventory\\RentalContractDto.cs",
               "RelativeDocumentMoniker": "SMT.Application\\DTO\\Inventory\\RentalContractDto.cs",
@@ -650,12 +664,11 @@
               "RelativeToolTip": "SMT.Application\\DTO\\Inventory\\RentalContractDto.cs",
               "ViewState": "AgIAADEAAAAAAAAAAADwvzgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T19:19:41.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T19:19:41.522Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "SaleRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\SaleRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Inventory\\SaleRepository.cs",
@@ -663,12 +676,11 @@
               "RelativeToolTip": "SMT.Infrastructure\\Repositories\\Inventory\\SaleRepository.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAUwDQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T21:20:14.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T21:20:14.502Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "ICashTransactionService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\CashManagement\\ICashTransactionService.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\CashManagement\\ICashTransactionService.cs",
@@ -676,12 +688,11 @@
               "RelativeToolTip": "SMT.Application\\Interfaces\\CashManagement\\ICashTransactionService.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAWwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T13:06:07.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T13:06:07.889Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "SaleDto.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\DTO\\Inventory\\SaleDto.cs",
               "RelativeDocumentMoniker": "SMT.Application\\DTO\\Inventory\\SaleDto.cs",
@@ -689,12 +700,11 @@
               "RelativeToolTip": "SMT.Application\\DTO\\Inventory\\SaleDto.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T21:23:58.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T21:23:58.584Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "IProductRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Items\\IProductRepository.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Items\\IProductRepository.cs",
@@ -702,12 +712,11 @@
               "RelativeToolTip": "SMT.Application\\Interfaces\\Items\\IProductRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T22:24:47.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-29T22:24:47.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "CashAccountService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\CashManagemant\\CashAccountService.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\CashManagemant\\CashAccountService.cs",
@@ -719,7 +728,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "CashAccountsController.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\CashManagement\\CashAccountsController.cs",
               "RelativeDocumentMoniker": "SMTreading.api\\Controllers\\CashManagement\\CashAccountsController.cs",
@@ -731,7 +740,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "ICashAccountService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\CashManagement\\ICashAccountService.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\CashManagement\\ICashAccountService.cs",
@@ -743,7 +752,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "CashTransferService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\CashManagemant\\CashTransferService.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\CashManagemant\\CashTransferService.cs",
@@ -755,7 +764,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "ICashTransferRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\CashManagement\\ICashTransferRepository.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\CashManagement\\ICashTransferRepository.cs",
@@ -767,7 +776,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "Expense.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\CashManagement\\Expense.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\CashManagement\\Expense.cs",
@@ -779,7 +788,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "ICashTransferService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\CashManagement\\ICashTransferService.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\CashManagement\\ICashTransferService.cs",
@@ -791,7 +800,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "CashTransferRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\CashManagemant\\CashTransferRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\CashManagemant\\CashTransferRepository.cs",
@@ -803,7 +812,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "ICashTransactionRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\CashManagement\\ICashTransactionRepository.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\CashManagement\\ICashTransactionRepository.cs",
@@ -815,7 +824,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "CashTransferController.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\CashManagement\\CashTransferController.cs",
               "RelativeDocumentMoniker": "SMTreading.api\\Controllers\\CashManagement\\CashTransferController.cs",
@@ -827,7 +836,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "CashTransactionRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\CashManagemant\\CashTransactionRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\CashManagemant\\CashTransactionRepository.cs",
@@ -839,7 +848,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "IExpenseCategoryService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\CashManagement\\IExpenseCategoryService.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\CashManagement\\IExpenseCategoryService.cs",
@@ -851,7 +860,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\Contacts\\CustomerController.cs",
               "RelativeDocumentMoniker": "SMTreading.api\\Controllers\\Contacts\\CustomerController.cs",
@@ -863,19 +872,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "SMT.Infrastructure\\DependencyInjection.cs",
-              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\DependencyInjection.cs",
-              "RelativeToolTip": "SMT.Infrastructure\\DependencyInjection.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAgwFEAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T23:34:06.016Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "ExpenseCategoryDto.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\DTO\\CashManagement\\ExpenseCategoryDto.cs",
               "RelativeDocumentMoniker": "SMT.Application\\DTO\\CashManagement\\ExpenseCategoryDto.cs",
@@ -887,7 +884,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "IBrandService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Items\\IBrandService.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Items\\IBrandService.cs",
@@ -899,7 +896,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "ExpenseCategoryService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\CashManagemant\\ExpenseCategoryService.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\CashManagemant\\ExpenseCategoryService.cs",
@@ -911,7 +908,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "ExpenseRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\CashManagemant\\ExpenseRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\CashManagemant\\ExpenseRepository.cs",
@@ -923,7 +920,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "CashAccount.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\CashManagement\\CashAccount.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\CashManagement\\CashAccount.cs",
@@ -935,7 +932,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "CustomerRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Contacts\\CustomerRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Contacts\\CustomerRepository.cs",
@@ -947,7 +944,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "CustomerService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Contacts\\CustomerService.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Contacts\\CustomerService.cs",
@@ -959,7 +956,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "IBrandRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Items\\IBrandRepository.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Items\\IBrandRepository.cs",
@@ -971,7 +968,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "BrandRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Items\\BrandRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Items\\BrandRepository.cs",
@@ -983,7 +980,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "ProductSerialDto.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\DTO\\Items\\ProductSerialDto.cs",
               "RelativeDocumentMoniker": "SMT.Application\\DTO\\Items\\ProductSerialDto.cs",
@@ -995,7 +992,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "ProductSerialService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Items\\ProductSerialService.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Items\\ProductSerialService.cs",
@@ -1007,7 +1004,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 44,
               "Title": "ProductSerialsController.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\Items\\ProductSerialsController.cs",
               "RelativeDocumentMoniker": "SMTreading.api\\Controllers\\Items\\ProductSerialsController.cs",
@@ -1020,7 +1017,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "IProductSerialService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Items\\IProductSerialService.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Items\\IProductSerialService.cs",
@@ -1032,7 +1029,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 46,
               "Title": "RentalContractRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\Rental\\RentalContractRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Inventory\\Rental\\RentalContractRepository.cs",
@@ -1045,7 +1042,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "RentalContractController.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\Inventory\\RentalContractController.cs",
               "RelativeDocumentMoniker": "SMTreading.api\\Controllers\\Inventory\\RentalContractController.cs",
@@ -1058,7 +1055,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 51,
               "Title": "ISaleRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\ISaleRepository.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Inventory\\ISaleRepository.cs",
@@ -1070,7 +1067,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 48,
               "Title": "IRentalContractService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\Rental\\IRentalContractService.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Inventory\\Rental\\IRentalContractService.cs",
@@ -1082,7 +1079,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 50,
               "Title": "SaleInvoice.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\Inventory\\SaleInvoice.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\Inventory\\SaleInvoice.cs",
@@ -1094,7 +1091,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 49,
               "Title": "SalesController.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\Inventory\\SalesController.cs",
               "RelativeDocumentMoniker": "SMTreading.api\\Controllers\\Inventory\\SalesController.cs",
@@ -1106,19 +1103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "ISaleService.cs",
-              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\ISaleService.cs",
-              "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Inventory\\ISaleService.cs",
-              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\ISaleService.cs",
-              "RelativeToolTip": "SMT.Application\\Interfaces\\Inventory\\ISaleService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAwwA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T09:46:25.589Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "IPurchaseRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\IPurchaseRepository.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Inventory\\IPurchaseRepository.cs",
@@ -1130,7 +1115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "ProductService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Items\\ProductService.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Items\\ProductService.cs",
@@ -1142,7 +1127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "ProductDto.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\DTO\\Items\\ProductDto.cs",
               "RelativeDocumentMoniker": "SMT.Application\\DTO\\Items\\ProductDto.cs",
@@ -1154,7 +1139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "RentalItemProductSerial.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\Inventory\\Rental\\RentalItemProductSerial.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\Inventory\\Rental\\RentalItemProductSerial.cs",
@@ -1166,7 +1151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "RentalInvoiceItem.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\Inventory\\Rental\\RentalInvoiceItem.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\Inventory\\Rental\\RentalInvoiceItem.cs",
@@ -1178,7 +1163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "RentalInvoice.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\Inventory\\Rental\\RentalInvoice.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\Inventory\\Rental\\RentalInvoice.cs",
@@ -1190,7 +1175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "RentalContractItemRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\Rental\\RentalContractItemRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Inventory\\Rental\\RentalContractItemRepository.cs",
@@ -1202,7 +1187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "RentalRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\Rental\\RentalRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Inventory\\Rental\\RentalRepository.cs",
@@ -1214,7 +1199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "RentalService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\Rental\\RentalService.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Inventory\\Rental\\RentalService.cs",
@@ -1226,7 +1211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "RentalReturn.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\Inventory\\Rental\\RentalReturn.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\Inventory\\Rental\\RentalReturn.cs",
@@ -1238,7 +1223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "IRentalRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\Rental\\IRentalRepository.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Inventory\\Rental\\IRentalRepository.cs",
@@ -1250,7 +1235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "IRentalContractItemRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\Rental\\IRentalContractItemRepository.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Inventory\\Rental\\IRentalContractItemRepository.cs",
@@ -1262,7 +1247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "RentalItemSerialRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\Rental\\RentalItemSerialRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Inventory\\Rental\\RentalItemSerialRepository.cs",
@@ -1274,7 +1259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "RentalItemRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\Rental\\RentalItemRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Inventory\\Rental\\RentalItemRepository.cs",
@@ -1286,7 +1271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "IRentalItemRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\Rental\\IRentalItemRepository.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Inventory\\Rental\\IRentalItemRepository.cs",
@@ -1298,7 +1283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "IRentalItemSerialRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\Rental\\IRentalItemSerialRepository.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Inventory\\Rental\\IRentalItemSerialRepository.cs",
@@ -1310,7 +1295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "IRentalService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\Rental\\IRentalService.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Inventory\\Rental\\IRentalService.cs",
@@ -1322,7 +1307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "PurchaseItemProductSerialRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\PurchaseItemProductSerialRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Inventory\\PurchaseItemProductSerialRepository.cs",
@@ -1334,7 +1319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "RentalEnum.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Enums\\RentalEnum.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Enums\\RentalEnum.cs",
@@ -1346,7 +1331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "RentalReturnItem.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\Inventory\\Rental\\RentalReturnItem.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\Inventory\\Rental\\RentalReturnItem.cs",
@@ -1358,7 +1343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "IPurchaseItemProductSerialRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\IPurchaseItemProductSerialRepository.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Inventory\\IPurchaseItemProductSerialRepository.cs",
@@ -1370,7 +1355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "IPurchaseItemRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\IPurchaseItemRepository.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Inventory\\IPurchaseItemRepository.cs",
@@ -1382,7 +1367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "ISaleItemRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Inventory\\ISaleItemRepository.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Inventory\\ISaleItemRepository.cs",
@@ -1394,7 +1379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 75,
               "Title": "PurchaseItemProductSerial.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\Inventory\\PurchaseItemProductSerial.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\Inventory\\PurchaseItemProductSerial.cs",
@@ -1406,7 +1391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "CustomerAdjustment.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\Accounts\\CustomerAdjustment.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\Accounts\\CustomerAdjustment.cs",
@@ -1418,7 +1403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "VendorAdjustment.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\Accounts\\VendorAdjustment.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\Accounts\\VendorAdjustment.cs",
@@ -1430,7 +1415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "SaleItemProductSerial.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\Inventory\\SaleItemProductSerial.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\Inventory\\SaleItemProductSerial.cs",
@@ -1442,7 +1427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 80,
               "Title": "VendorPaymentService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Accounts\\VendorPaymentService.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Accounts\\VendorPaymentService.cs",
@@ -1454,7 +1439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 81,
               "Title": "VendorPaymentRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Accounts\\VendorPaymentRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Accounts\\VendorPaymentRepository.cs",
@@ -1466,7 +1451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 79,
               "Title": "SaleItemProductSerialRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\SaleItemProductSerialRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Inventory\\SaleItemProductSerialRepository.cs",
@@ -1478,7 +1463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 82,
               "Title": "CustomerPaymentRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Accounts\\CustomerPaymentRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Accounts\\CustomerPaymentRepository.cs",
@@ -1490,7 +1475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 83,
               "Title": "ICustomerLedgerService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Accounts\\ICustomerLedgerService.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Accounts\\ICustomerLedgerService.cs",
@@ -1502,7 +1487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 86,
               "Title": "IVendorLedgerService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Accounts\\IVendorLedgerService.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Accounts\\IVendorLedgerService.cs",
@@ -1514,7 +1499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 85,
               "Title": "IVendorPaymentRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Accounts\\IVendorPaymentRepository.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Accounts\\IVendorPaymentRepository.cs",
@@ -1526,7 +1511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 84,
               "Title": "IVendorPaymentService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Accounts\\IVendorPaymentService.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Accounts\\IVendorPaymentService.cs",
@@ -1538,7 +1523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 88,
               "Title": "VendorRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Contacts\\VendorRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Contacts\\VendorRepository.cs",
@@ -1550,7 +1535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 87,
               "Title": "VendorService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Contacts\\VendorService.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Contacts\\VendorService.cs",
@@ -1562,7 +1547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 89,
               "Title": "IVendorRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Contacts\\IVendorRepository.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Contacts\\IVendorRepository.cs",
@@ -1574,7 +1559,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 90,
               "Title": "VendorPayment.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\Accounts\\VendorPayment.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\Accounts\\VendorPayment.cs",
@@ -1586,7 +1571,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 91,
               "Title": "Vendor.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\Contacts\\Vendor.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\Contacts\\Vendor.cs",
@@ -1598,7 +1583,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 93,
               "Title": "VendorEnum.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Enums\\VendorEnum.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Enums\\VendorEnum.cs",
@@ -1610,7 +1595,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 92,
               "Title": "Customer.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\Contacts\\Customer.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\Contacts\\Customer.cs",
@@ -1622,7 +1607,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 94,
               "Title": "TokenService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Auth\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Auth\\Services\\TokenService.cs",
@@ -1634,7 +1619,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 96,
               "Title": "ProductImageService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Items\\ProductImageService.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Items\\ProductImageService.cs",
@@ -1647,7 +1632,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 95,
               "Title": "ProductImagesController.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\Items\\ProductImagesController.cs",
               "RelativeDocumentMoniker": "SMTreading.api\\Controllers\\Items\\ProductImagesController.cs",
@@ -1659,7 +1644,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 97,
               "Title": "IProductImageService.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Items\\IProductImageService.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Items\\IProductImageService.cs",
@@ -1671,7 +1656,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 99,
               "Title": "ProductImage.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\Items\\ProductImage.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\Items\\ProductImage.cs",
@@ -1683,7 +1668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 98,
               "Title": "IProductImageRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Items\\IProductImageRepository.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Items\\IProductImageRepository.cs",
@@ -1695,7 +1680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 100,
               "Title": "ProductImageRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Items\\ProductImageRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Items\\ProductImageRepository.cs",
@@ -1707,7 +1692,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 101,
               "Title": "VendorController.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\Controllers\\Contacts\\VendorController.cs",
               "RelativeDocumentMoniker": "SMTreading.api\\Controllers\\Contacts\\VendorController.cs",
@@ -1719,7 +1704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 102,
               "Title": "IVendoServicer.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Interfaces\\Contacts\\IVendoServicer.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Interfaces\\Contacts\\IVendoServicer.cs",
@@ -1731,7 +1716,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 103,
               "Title": "CustomerDto.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\DTO\\Contacts\\CustomerDto.cs",
               "RelativeDocumentMoniker": "SMT.Application\\DTO\\Contacts\\CustomerDto.cs",
@@ -1743,7 +1728,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 104,
               "Title": "PurchaseItemRepository.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Repositories\\Inventory\\PurchaseItemRepository.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Repositories\\Inventory\\PurchaseItemRepository.cs",
@@ -1755,7 +1740,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 105,
               "Title": "VendorDto.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\DTO\\Contacts\\VendorDto.cs",
               "RelativeDocumentMoniker": "SMT.Application\\DTO\\Contacts\\VendorDto.cs",
@@ -1767,7 +1752,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 107,
               "Title": "SMTreading.api.csproj",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMTreading.api\\SMTreading.api.csproj",
               "RelativeDocumentMoniker": "SMTreading.api\\SMTreading.api.csproj",
@@ -1779,7 +1764,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 106,
               "Title": "Brand.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Entities\\Items\\Brand.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Entities\\Items\\Brand.cs",
@@ -1791,43 +1776,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
-              "Title": "UserResponse.cs",
-              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Auth\\DTO\\UserResponse.cs",
-              "RelativeDocumentMoniker": "SMT.Application\\Auth\\DTO\\UserResponse.cs",
-              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Auth\\DTO\\UserResponse.cs",
-              "RelativeToolTip": "SMT.Application\\Auth\\DTO\\UserResponse.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwAcAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T21:23:28.949Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 107,
-              "Title": "LoginRequest.cs",
-              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Auth\\DTO\\LoginRequest.cs",
-              "RelativeDocumentMoniker": "SMT.Application\\Auth\\DTO\\LoginRequest.cs",
-              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Auth\\DTO\\LoginRequest.cs",
-              "RelativeToolTip": "SMT.Application\\Auth\\DTO\\LoginRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T22:36:49.434Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 109,
-              "Title": "LoginCommand.cs",
-              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Auth\\Commands\\LoginCommand.cs",
-              "RelativeDocumentMoniker": "SMT.Infrastructure\\Auth\\Commands\\LoginCommand.cs",
-              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Auth\\Commands\\LoginCommand.cs",
-              "RelativeToolTip": "SMT.Infrastructure\\Auth\\Commands\\LoginCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T20:49:06.827Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 112,
               "Title": "Result.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Common\\Result.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Common\\Result.cs",
@@ -1839,7 +1788,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 109,
               "Title": "IPasswordHasher.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\Auth\\Interfaces\\IPasswordHasher.cs",
               "RelativeDocumentMoniker": "SMT.Application\\Auth\\Interfaces\\IPasswordHasher.cs",
@@ -1848,18 +1797,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-21T22:45:59.249Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 111,
-              "Title": "CreateUserCommand.cs",
-              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Auth\\Commands\\CreateUserCommand.cs",
-              "RelativeDocumentMoniker": "SMT.Infrastructure\\Auth\\Commands\\CreateUserCommand.cs",
-              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Auth\\Commands\\CreateUserCommand.cs",
-              "RelativeToolTip": "SMT.Infrastructure\\Auth\\Commands\\CreateUserCommand.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAjwAoAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T21:21:54.161Z"
             },
             {
               "$type": "Document",
@@ -1875,19 +1812,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
-              "Title": "CreateUserDto.cs",
-              "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\DTO\\Identity\\CreateUserDto.cs",
-              "RelativeDocumentMoniker": "SMT.Application\\DTO\\Identity\\CreateUserDto.cs",
-              "ToolTip": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\DTO\\Identity\\CreateUserDto.cs",
-              "RelativeToolTip": "SMT.Application\\DTO\\Identity\\CreateUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T22:54:58.275Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 110,
               "Title": "CreateUserCommandHandler.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Infrastructure\\Auth\\Commands\\CreateUserCommandHandler.cs",
               "RelativeDocumentMoniker": "SMT.Infrastructure\\Auth\\Commands\\CreateUserCommandHandler.cs",
@@ -1899,7 +1824,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 111,
               "Title": "TenantStatus.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Domain\\Enums\\TenantStatus.cs",
               "RelativeDocumentMoniker": "SMT.Domain\\Enums\\TenantStatus.cs",
@@ -1911,7 +1836,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 113,
               "Title": "BrandDto.cs",
               "DocumentMoniker": "D:\\Project\\SM trading\\SMTrading\\SMTreading\\SMT.Application\\DTO\\Items\\BrandDto.cs",
               "RelativeDocumentMoniker": "SMT.Application\\DTO\\Items\\BrandDto.cs",
